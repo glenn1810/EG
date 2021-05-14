@@ -1,0 +1,15 @@
+
+
+
+<section class="card h-100">
+  <div class="card-header">
+    User List
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let value of loadUsers$ | async" [class.active]="value.isSelected">
+        <a href="#" (click)="userOnChanged(value.id)"> {{ value.name }}</a>
+      </li>
+    </ul>
+  </div>
+</section>

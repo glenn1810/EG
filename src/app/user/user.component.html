@@ -1,0 +1,27 @@
+
+
+
+<section class="card h-100">
+  <div class="card-header">
+    <app-bread-crumbs></app-bread-crumbs>
+  </div>
+  <div class="card-body">
+    <div *ngIf="(currentUserId$ | async)">
+      <div *ngIf="(userInfo$ | async) as user">
+        <p>Name: {{user.name}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Mobile Number: {{user.phone}}</p>
+      </div>
+    </div>
+
+
+    <div *ngIf="!(currentUserId$ | async)">
+      <div class="alert alert-danger" role="alert">
+       Select User
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

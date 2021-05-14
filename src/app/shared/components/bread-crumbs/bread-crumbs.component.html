@@ -1,0 +1,9 @@
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Users</li>
+    <li class="breadcrumb-item active" *ngIf="(userInfo$ | async) as user">{{user.name}}</li>
+  </ol>
+</nav>
+
+
